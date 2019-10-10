@@ -6,7 +6,7 @@ import requests
 from lxml import etree
 
 
-# 抓取本网站的不同底去的经点只需要修改3处链接上的地点即可
+# 抓取本网站的不同底去的经点只需要修改3处链接上的地点即可，同时可以修改相应的数据库集合名称
 class Trip(object):
     def __init__(self):
         self.headers = {
@@ -18,7 +18,7 @@ class Trip(object):
             'Upgrade-Insecure-Requests': '1',
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36'
         }
-        self.host = '106.14.190.89'
+        self.host = '127.0.0.1'
         self.mongodb = 'Trip'  # 库
         self.mongo_table = 'Chengdu'  # 集合
         self.mongo_table2 = 'Chengdu2'  # 集合2(存储没有照片评论描述的景点)
